@@ -1,0 +1,51 @@
+<!doctype HTML>
+<head>
+	<meta charset="UTF-8">
+	<title>로그인</title>
+	<link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/51db22a717.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="main-container">
+		<div class="main-wrap">
+		<header>
+			<div class="sel-lang-wrap">
+				<select class="lang-select">
+					<option>test</option>
+					<option>test2</option>
+				</select>
+			</div>
+			<div class="logo-wrap">
+				<img src="https://w.namu.la/s/732b313c72295261a0301470ed7c599a3de959fc420a211077ad28c3727f34849572c7ba4d752a05a82e0285b0b89f7661f21e3b208f0cc3c01126934ec2f43a6da70884d279844c36a61c46a1d22ae3db5b70ec61cc80479020e42a99a831e1">
+			</div>
+		</header>
+        <form action="/search", method="post">
+		<section class="login-input-section-wrap">
+			<div class="login-input-wrap">	
+				<input placeholder="검색키워드1, 검색키워드2, ..." type="text", name="item_name"></input>
+			</div>
+            <div class="login-input-wrap">	
+				<input placeholder="검색기간(일) (기본값:1)" type="text", name="period"></input>
+			</div>
+			<div class="login-button-wrap">
+				<button>검색</button>
+			</div>
+        </form>
+		</section>
+		<section class="Easy-sgin-in-wrap">
+			<h2>test</h2>
+			<ul class="sign-button-list">
+				<li><button><i class="fas fa-qrcode"></i><span>나라장터 바로가기</span></button></li>
+				<li><button><i class="fab fa-facebook-square"></i><span>상식이네 창문깨기</span></button></li>
+				<li><button><i class="fab fa-line"></i><span>인규네 대문차기</span></button></li>
+			</ul>
+			<p class="forget-msg">anjfqhkdy tlqkf wnrrhtlvj? | skrk</p>
+		</section>
+		<footer>
+			<div class="copyright-wrap">
+			<span>Copyright © Tlqkf Corp. All Rights Reserved.</span>
+			</div>
+		</footer>
+		</div>
+	</div>
+</body>

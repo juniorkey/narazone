@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나라즈원</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>나라즈원 검색결과</h1>
+    {% for key, value in lst_a.items() %} 
+        <h2>{{key}}</h2>
+        <table border="1">
+            <th>공고명</th>
+            <th>공고기관</th>
+            <th>수요기관</th>
+            <th>계약방법</th>
+            <th>개시(마감)일시</th>
+            {% for i in value %} 
+            <tr>
+                <td>{{i[0]}}</td>
+                <td>{{i[1]}}</td>
+                <td>{{i[2]}}</td>
+                <td>{{i[3]}}</td>
+                <td>{{i[4]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endfor %}
+</body>
+</html>
