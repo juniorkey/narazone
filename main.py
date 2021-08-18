@@ -50,9 +50,9 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 templates = Jinja2Templates(directory="templates")
 
-@app.get("/items/{id}", response_class=HTMLResponse)
-async def read_item(request: Request, id: str):
-    return templates.TemplateResponse("item.html", {"request": request, "id": id})
+# @app.get("/items/{id}", response_class=HTMLResponse)
+# async def read_item(request: Request, id: str):
+#     return templates.TemplateResponse("item.html", {"request": request, "id": id})
 
 
 
@@ -61,7 +61,7 @@ async def read_item(request: Request, id: str):
 async def read_item(request: Request):
     return templates.TemplateResponse("item.html", {"request": request})
 
-@app.post("/search/result", response_class=HTMLResponse)
+@app.post("/", response_class=HTMLResponse)
 async def handle_form(request: Request, item_name: str = Form(...), period: int = Form(...)):
     return templates.TemplateResponse("item2.html", {"request": request, "lst_a": search(item_name, period)})
 
