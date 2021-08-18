@@ -57,7 +57,7 @@ templates = Jinja2Templates(directory="templates")
 
 
 
-@app.get("/search", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
     return templates.TemplateResponse("item.html", {"request": request})
 
