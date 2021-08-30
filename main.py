@@ -103,7 +103,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 templates = Jinja2Templates(directory="templates")
 @app.get("/", response_class=HTMLResponse)
 async def read_item(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse("item3.html", {"request": request})
 
 # 공고 검색
 # 키워드 : item_name / 검색기간 : period
